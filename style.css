@@ -1,0 +1,330 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    
+}
+section{
+    padding: 120px 0;
+    background-color: rgb(6,6,65);
+    color: white;
+}
+.navbar{
+    position: fixed;
+    width: 100%;
+    padding: 0;
+    font-family:'Times New Roman', Times, serif;
+    transition: all 0.3s ease;
+    z-index: 999;
+    background-color: rgb(6,6,65);
+
+}
+.menu{
+    display: flex;
+    list-style-type:none;
+    width: 300%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+}
+
+.menu li a{
+    color: white;
+    text-decoration: none;
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 20px;
+    display: block;
+    
+}
+@media screen and (max-width:942px){
+    .line{
+        width:30px;
+        height:3px;
+        background: #fff;
+        margin: 5px;
+
+    }
+    nav{
+        position: relative;
+    }
+    .hamburger{
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: auto;
+        z-index: 1;
+    }
+    .menu{
+        top: 0;
+        bottom: 0;
+        position: fixed;
+        background: rgb(158, 154, 155) ;
+        height: auto;
+        width: 100%;
+        flex-direction: column;
+        display: none;
+    }
+    .menu.open{
+        display: flex;
+        
+    }
+}
+.max-width{
+    max-width: 1400px;
+    padding: 0 80px;
+    margin: auto;
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.navbar .max-width .logo a{
+    color: white;
+    padding: 0;
+    margin: 0;
+    font-size: 60px;
+    font-weight: 600;
+    font-family: 'Poppins' ,sans-serif;
+    transform: scale() 2s;
+}
+.navbar .max-width .logo a:hover{
+    color: rgb(226, 146, 88);
+}
+.navbar .menu li{
+    list-style-type: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    color:white;
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 40px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: 0.3s ease-in-out;
+}
+.navbar .menu li a:hover{
+    background-color: rgb(226, 146, 88);
+    transform: translateY(-15px);
+    color: rgb(6,6,65);
+}
+.menu-btn{
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+.course-container{
+    max-width: 1400px;
+    height: 70vh;
+    margin: 20px auto 0 auto;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-self:center ;
+    flex-direction: column;
+    background:rgb(194, 191, 191);
+    background-position:center;
+    overflow:hidden;
+    border:5px solid rgb(188, 188, 204) ;
+    backdrop-filter: blur(5px);
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.course-container:hover{
+    background: rgb(226, 146, 88);
+}
+.course-container .course{
+    max-width: 0;
+    padding: 1vh;
+    margin: auto;
+    display:flex;
+    flex-direction:center;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+.course-container .course img{
+    padding:0;
+    margin: 0;
+    width: 100vh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.course{
+    padding: 20px;
+    margin: 30px;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 1.3rem;
+    display:flex;
+    flex-direction: center;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5rem;
+    text-shadow: 0 0.3rem 0.5rem rgba(0,0,0,0.4);
+}
+.course:hover{
+    animation-name: courses-animation;
+    animation-duration: 2s;
+}
+@keyframes courses-animation{
+    0% {opacity: 0;}
+    25% {opacity: 0.3;}
+    50% {opacity: 0.6;}
+    75% {opacity: 0.8;}
+    100% {opacity: 1;}
+}
+
+@media screen and (max-width:1200px){
+    .course-container{
+        height: 100%;
+    }
+    .course-container .course img{
+        width: 40vh;
+        height: 50vh;
+    }
+    .course-container .course{
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+
+    }
+}
+.button a{
+    display:block;
+    width: 100px;
+    height: 25px;
+    background: rgb(158, 154, 155);
+    text-align: center;
+    border-radius: 5px; 
+    color:white;
+    font-weight: bold;
+    line-height: 25px;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+}
+.button a:hover{
+    background: #042755;
+}
+
+/*iletişim sayfası*/
+.contact{
+    width: 100%;
+    height: 100%;
+    background: rgb(6, 6, 65);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+.img-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+
+}
+.img-container img{
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    
+}
+.contact-heading{
+    font-family: "Baloo Da 2",serif;
+    font-size: 3.4rem;
+    font-weight: 15vh;
+    color:white;
+    margin-bottom: 2;
+    text-align: center;
+    
+}
+.contact-right form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.input-group{
+    position: relative;
+}
+.field{
+    width: 30rem;
+    height: 5rem;
+    border: none;
+    border: 1rem solid  rgb(6,6,85);
+    border-style:ridge;
+    margin: 2rem 0;
+    padding: 1rem 1rem 1rem 0;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 1.6rem;
+    color: rgba(1,1,22);
+    cursor: pointer;
+}
+.field:focus{
+    border: dashed;
+    color: rgb(8, 6, 78);
+}
+.submit-btn{
+    width: 30rem;
+    height: 5rem;
+    background: rgb(3, 3, 59);
+    color: #fff;
+    border: none;
+    margin-top: 2rem;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    cursor: pointer;
+    z-index: 1;
+}
+.submit-btn:hover{
+    
+    transition: 1s;
+    background: rgb(196, 192, 193);
+    color: rgb(226, 146, 88);
+}
+footer{
+    text-align: center;
+    width: 100%;
+    height: 15vh;
+    margin: auto;
+    padding-top: 20px;
+    background-color: rgb(6,6,65);
+    color: white;
+    cursor: pointer;
+}
+footer a{ 
+    color: white;
+}
+
+
+
+
+
